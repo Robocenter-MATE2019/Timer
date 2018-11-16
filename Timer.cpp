@@ -1,5 +1,10 @@
 #include "Timer.h"
 
+Timer::Timer()
+{
+	m_isStarted = false;
+}
+
 void Timer::start()
 {
 	m_isStarted = true;
@@ -11,7 +16,6 @@ long Timer::elapsed()
 	if (m_isStarted) return millis() - m_start;
 	return 0;
 }
-
 
 bool Timer::is_started()
 {
