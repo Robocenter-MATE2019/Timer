@@ -1,9 +1,8 @@
 #pragma once
 
-#include <Arduino.h>
-
 class Timer {
 public:
+	Timer();
 	void start();
 	long elapsed();
 	bool is_started();
