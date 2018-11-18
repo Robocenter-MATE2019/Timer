@@ -14,7 +14,7 @@ void Timer::start()
 
 long Timer::elapsed()
 {
-	if (m_isStarted) return millis() - m_start;
+	if (m_isStarted) return millis() - m_start; // сделать через тернарный оператор 
 	return 0;
 }
 
