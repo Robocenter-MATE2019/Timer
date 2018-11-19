@@ -1,5 +1,5 @@
-#include <Arduino.h>
 #include "Timer.h"
+#include <Arduino.h>
 
 Timer::Timer()
 {
@@ -14,8 +14,7 @@ void Timer::start()
 
 long Timer::elapsed()
 {
-	if (m_isStarted) return millis() - m_start; // сделать через тернарный оператор 
-	return 0;
+	return m_isStarted ? millis() - m_start : 0;
 }
 
 bool Timer::is_started()
